@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-md-6 offset-md-3 mt-4">
+        <mat-card>
+            
+                <h3 style="background-color: blueviolet;" class="p-2 text-center text-white ">{{isInEditMode ? 'Update Post' :' Add Post'}}</h3>
+           
+            <mat-card-content>
+                <div class="d-flex formFields">
+                    <form [formGroup]="postForm" (ngSubmit)="onPostSubmit()" >
+                        <mat-form-field class="formField" appearance="fill">
+                            <mat-label>Title</mat-label>
+                            <input type="text" formControlName="title" id="title" matInput>
+                          </mat-form-field>
+                          <mat-form-field class="formField" appearance="fill">
+                            <mat-label>Select</mat-label>
+                            <mat-select formControlName="userId"  id="userId">
+                              <mat-option *ngFor="let userId of [1,2,3,4,5,6,7,8,9,10]" [value]="userId">{{userId}}</mat-option>
+                              
+                            </mat-select>
+                          </mat-form-field >
+                          <mat-form-field class="formField" appearance="fill">
+                            <mat-label>content</mat-label>
+                            <textarea formControlName="content"  id="content"  rows="4" matInput></textarea>
+                          </mat-form-field>
+
+                          <button type="submit" *ngIf="!isInEditMode" mat-raised-button color="accent">Add Post</button>
+                          <button type="button" (click)="onUpdate()" *ngIf="isInEditMode" mat-raised-button color="accent"> Update Post</button>
+                    </form>
+                </div>
+                  
+            </mat-card-content>
+        </mat-card>
+     
+    </div>
+</div>

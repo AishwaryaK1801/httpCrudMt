@@ -1,0 +1,18 @@
+.main-nav.navbar-light {
+.navbar-nav .active > .nav-link,
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show,
+.navbar-nav .show > .nav-link {
+  color: #f4278d;
+}
+
+}
+
+
+.main-nav{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+}

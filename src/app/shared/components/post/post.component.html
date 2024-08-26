@@ -1,0 +1,31 @@
+<div class="col-md-6 offset-md-3 mt-4" *ngIf="postObj ; else noPostObj">
+    <mat-card class="example-card">
+        <mat-card-header>
+         
+          <mat-card-title>{{postObj.title}}</mat-card-title>
+         
+        </mat-card-header>
+        <!-- <div class="imgContainer">
+            <img mat-card-md-image mat-card-image src="https://picsum.photos/200/300" alt="img"/>
+          </div> -->
+        
+        
+        <mat-card-content>
+          <p>
+           {{postObj.content}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions class="d-flex justify-content-between">
+          <button  routerLink="editPost" mat-raised-button color="primary">Edit Post</button>
+          <button (click)="onRemove()" mat-raised-button color="warn"> Remove Post</button>
+        </mat-card-actions>
+      </mat-card>
+</div>
+
+
+
+<ng-template #noPostObj>
+    <span class=" text-danger"> 
+        Post is not available to show !
+    </span>
+</ng-template>

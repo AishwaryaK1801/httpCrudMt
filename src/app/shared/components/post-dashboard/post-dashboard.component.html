@@ -1,0 +1,19 @@
+<!-- <p class="text-white">post-dashboard works!</p> -->
+
+<div class="row mb-3">
+  <div
+    style="background-color: blueviolet"
+    class="col-12 text-white text-center text-capitalize p-2"
+  >
+    <h2 class="mb-0">Posts</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 offset-md-3 d-flex flex-column-reverse" >
+    <app-post-card
+      [getCard]="card"
+      *ngFor="let card of postsArr"
+    ></app-post-card>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<mat-card class="mb-4 text-center">
+    <mat-card-title style="background-color: darkorchid;" class="text-white p-2">
+        {{getCard.title}}
+    </mat-card-title>
+    
+    <mat-card-content>
+        <p>{{getCard.content}}</p>
+    </mat-card-content>
+    <mat-divider inset></mat-divider>
+
+    <a [routerLink]="getCard.id" class="btn-link readMore" >Read More...</a>
+</mat-card>
